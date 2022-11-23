@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB GAME</title>
+    <link href="gameIcon.jpg" rel="icon">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <div class="centered-container vertical-grid">
+                <div>THE GREAT</div>
+                <div id="rgbcolor">RGB(-, -, -)</div>
+                <div>GUESSING GAME</div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <nav>
+                <div id="new-color" class="selectable">NEW COLORS</div>
+                <div class="invisible" id="message">Try Again</div>
+                <div class="btn-group">
+                    <div class="selectable selected" id="easy">EASY</div>
+                    <div class="selectable" id="hard">HARD</div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="centered-container color-box-container">
+            <div class="color-box selectable hover-outline" id="box-one"></div>
+            <div class="color-box selectable hover-outline" id="box-two"></div>
+            <div class="color-box selectable hover-outline" id="box-three"></div>
+            <div class="color-box selectable hover-outline" id="box-four"></div>
+            <div class="color-box selectable hover-outline" id="box-five"></div>
+            <div class="color-box selectable hover-outline" id="box-six"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
