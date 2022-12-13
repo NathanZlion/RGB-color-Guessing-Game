@@ -41,29 +41,23 @@ function randomNumber() {
     return Math.round(Math.random() * 255);
 }
 function reset() {
-    if (easyMode) {
         boxOne.style.backgroundColor = getRandomColor();
         boxTwo.style.backgroundColor = getRandomColor();
         boxThree.style.backgroundColor = getRandomColor();
         boxOne.classList.remove("invisible");
         boxTwo.classList.remove("invisible");
         boxThree.classList.remove("invisible");
+    if (easyMode) {
         remove(boxFour);
         remove(boxFive);
         remove(boxSix);
     } else {
-        boxOne.style.backgroundColor = getRandomColor();
-        boxTwo.style.backgroundColor = getRandomColor();
-        boxThree.style.backgroundColor = getRandomColor();
         add(boxFour);
         add(boxFive);
         add(boxSix);
         boxFour.style.backgroundColor = getRandomColor();
         boxFive.style.backgroundColor = getRandomColor();
         boxSix.style.backgroundColor = getRandomColor();
-        boxOne.classList.remove("invisible");
-        boxTwo.classList.remove("invisible");
-        boxThree.classList.remove("invisible");
         boxFour.classList.remove("invisible");
         boxFive.classList.remove("invisible");
         boxSix.classList.remove("invisible");
