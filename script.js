@@ -41,12 +41,12 @@ function randomNumber() {
     return Math.round(Math.random() * 255);
 }
 function reset() {
-        boxOne.style.backgroundColor = getRandomColor();
-        boxTwo.style.backgroundColor = getRandomColor();
-        boxThree.style.backgroundColor = getRandomColor();
-        boxOne.classList.remove("invisible");
-        boxTwo.classList.remove("invisible");
-        boxThree.classList.remove("invisible");
+    boxOne.style.backgroundColor = getRandomColor();
+    boxTwo.style.backgroundColor = getRandomColor();
+    boxThree.style.backgroundColor = getRandomColor();
+    boxOne.classList.remove("invisible");
+    boxTwo.classList.remove("invisible");
+    boxThree.classList.remove("invisible");
     if (easyMode) {
         remove(boxFour);
         remove(boxFive);
@@ -92,7 +92,7 @@ function displayQuestion() {
     rgbDisplay.textContent = String(currSolution);
 }
 function getRandomColor() {
-    return `RGB(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+    return `RGB( ${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
 }
 function remove(elem) {
     elem.classList.add("remove");
@@ -106,9 +106,25 @@ function check() {
     }
     if (this.style.backgroundColor === currSolution) {
         header.style.backgroundColor = this.style.backgroundColor;
-        message.textContent = "YOU WON !";
+        message.textContent = "You got that one right!";
         message.classList.remove("invisible");
         gameEnd = true;
+        // wait for 3 seconds and reset the game
+        setTimeout(function () {
+            message.textContent = "You got that one right!  .. 3";
+        }, 1000);
+        setTimeout(function () {
+            message.textContent = "You got that one right! .. 2";
+        }, 2000);
+        setTimeout (function () {
+            message.textContent = "You got that one right! .. 1";
+        }, 3000);
+        setTimeout(function () {
+            message.textContent = "You got that one right! .. 0";
+        }, 4000);
+        setTimeout(function () {
+            reset();
+        }, 5000);
     } else {
         this.classList.add("invisible");
         message.classList.remove("invisible");
